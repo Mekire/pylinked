@@ -61,10 +61,9 @@ class Double(object):
 
     def insert_before(self, before, value):
         """
-        Insert a new node in the list after a known node or index.
-        Inserting after a known node is constant time O(1) whereas inserting
-        after an index is linear O(n).  Note that when using an index the new
-        node will be at index+1.
+        Insert a new node in the list before a known node or index.
+        Inserting before a known node is constant time O(1) whereas inserting
+        before an index is linear O(n).
         """
         node = before if isinstance(before, Node) else self[before]
         new_node = Node(value, node.last_node, node)
